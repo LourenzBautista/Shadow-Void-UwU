@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        /* Headings */
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        /* Paragraphs */
+        p {
+            margin-bottom: 10px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        /* Images */
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            transform: scale(1);
+            transition: transform 0.3s ease, transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        img:hover {
+            transform: scale(1.05) rotate(5deg); /* 2D transform */
+        }
+
+        /* Videos */
+        video {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+            perspective: 1000px; /* 3D effect */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            padding: 8px 16px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            transform: scale(1.1) rotateY(15deg); /* 3D transform */
+            color: #ff6347;
+        }
+
+        /* Form */
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #eaeaea;
+            border-radius: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05) rotateX(10deg); /* 3D transform */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            img,
+            video {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <center>
+            <h1>Welcome to My Website</h1>
+            <p>How to get a beach body?</p>
+            <p>Step 1: Have a body.</p>
+            <p>Step 2: Go to the beach.</p>
+            <p>#BoracayLife</p>
+
+            <h2>Check Out This Cool Image:</h2>
+            <img src="C:\Users\2023-1-01333\Downloads\Bora Bora.jpg" alt="Beautiful Landscape">
+
+            <h2>Watch This Video:</h2>
+            <video controls>
+                <source src="C:\Users\2023-1-01333\Downloads\4096040-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <h2>Visit 4 More Free Photos & Videos:</h2>
+            <p>
+                Click here to go to 
+                <a href="https://www.pexels.com/videos/" target="_blank">Pexels Videos</a>.
+            </p>
+
+            <!-- Contact Form -->
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </center>
+    </div>
+	<footer>
+	<p>&copy; RenzLou UwU UwU</p>
+	</footer>
+</body>
+</html>
