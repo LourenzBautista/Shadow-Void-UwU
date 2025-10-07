@@ -39,7 +39,7 @@
             <button onclick="toggleText()">Show/Hide Text</button>
 
             <h2>Resize the Image:</h2>
-            <img id="myImage" src="C:\Users\lourenz\OneDrive\Documents\3rd Year College\PRELIMS\WSTL31C\Bora Bora.jpg" width="300">
+            <img id="myImage" src="C:\Users\2023-1-01333\Downloads\Bora Bora.jpg" width="300">
             <br>
             <button onclick="resizeImage()">Resize Image</button>
 
@@ -59,29 +59,50 @@
 
     <script>
 
+        // Variables
+        let currentBackgroundColor = '#f4f4f4'; // Initial background color
+
+        // Functions
         function changeBackground() {
-            document.body.style.backgroundColor =
-                document.body.style.backgroundColor === 'lightblue' ? '#f4f4f4' : 'lightblue';
+            // Operators & Conditional Statements
+            currentBackgroundColor = (currentBackgroundColor === '#f4f4f4') ? 'lightblue' : '#f4f4f4';
+            document.body.style.backgroundColor = currentBackgroundColor;
         }
 
         function toggleText() {
+            // Variables & Conditional Statements
             let text = document.getElementById("toggleText");
             text.style.display = (text.style.display === "none") ? "block" : "none";
         }
 
         function resizeImage() {
+            // Variables, Operators & Conditional Statements
             let img = document.getElementById("myImage");
             img.width = (img.width === 300) ? 500 : 300;
         }
 
         function showDateTime() {
-            document.getElementById("dateTime").innerHTML = new Date().toLocaleString();
+            // String & Functions
+            let currentDateTime = new Date().toLocaleString(); // Current Date and Time
+            document.getElementById("dateTime").innerHTML = currentDateTime;
         }
 
         function showAlert(event) {
-            event.preventDefault();
+            // Object & Loops
+            event.preventDefault(); // Prevent form submission
+            let formData = {}; // Object to store form data
+            formData.name = event.target[0].value; // Name input
+            formData.email = event.target[1].value; // Email input
+            formData.message = event.target[2].value; // Message input
+
+            // Loop through the form data object and alert the user
+            for (let key in formData) {
+                alert(`${key.toUpperCase()}: ${formData[key]}`);
+            }
+
             alert("Thank you for submitting the form!");
         }
+
     </script>
 </body>
 </html>
